@@ -65,14 +65,15 @@ static const char *filemgrcmd[]  = { "thunar", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = filemgrcmd } },
-        { MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_Left,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_Right,      focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Right,      incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Left,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right,  incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Left,   incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
